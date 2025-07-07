@@ -1,0 +1,301 @@
+/* styles.css */
+/* Font, Colors & Layout Styling */
+:root {
+  --primary: #0D47A1;
+  --secondary: #FFC107;
+  --accent: #F5F5F5;
+  --text: #333;
+  --font-main: 'Poppins', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background: white;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Header Section */
+header {
+  background: var(--primary);
+  color: white;
+  padding: 10px 30px;           /* ⬅ Header छोटा कर दिया */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Website Name Text */
+header h1 {
+  font-size: 2.8rem;            /* ⬅ Text बड़ा और bold */
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+/* Navigation Links */
+nav {
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  position: relative;
+  padding: 4px 0;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--secondary);
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: var(--secondary);
+}
+
+
+
+.hero {
+  position: relative;
+  text-align: center;
+  background: var(--accent);
+}
+
+.slideshow {
+  width: 100%;
+  height: 400px; /* You can adjust this */
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;      /* ✅ Full area cover without black sides */
+  object-position: center; /* ✅ Centered image */
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+#about {
+  padding: 40px 20px; /* ⬅ Height कम किया */
+  background-color: #ffffff;
+  text-align: center;
+}
+
+#about h3 {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+  position: relative;
+}
+
+#about h3::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary);
+  display: block;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+#about p {
+  font-size: 1.05rem;
+  color: #333;
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+.section {
+  padding: 5px 30px; /* ⬅ अब ऊपर-नीचे space कम हो जाएगा */
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.section:nth-child(even) {
+  background-color: #ffffff; /* Alternate BG */
+}
+
+.section h3 {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.section h3::after {
+  content: "";
+  width: 80px;
+  height: 3px;
+  background-color: var(--secondary);
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+
+.section#contact a {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+#contact p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#contact a {
+  color: var(--primary);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#contact form {
+  margin-top: 20px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact input,
+#contact textarea {
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  transition: border 0.3s;
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  border-color: var(--primary);
+}
+
+#contact button {
+  background-color: var(--primary);
+  color: white;
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact button:hover {
+  background-color: var(--secondary);
+}
+
+
+
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.service {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+}
+
+.service h4 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.service p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--primary);
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
