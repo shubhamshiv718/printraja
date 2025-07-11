@@ -12,22 +12,24 @@
   <!-- ✅ SEO Keywords -->
   <meta name="keywords" content="color printout, spiral binding, PVC card print, glossy printing, A0 map print, online printing, photo print, print delivery India">
     <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- External CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-  <!-- Header/Navbar -->
-  <header>
-    <h1>PrintRaja</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- Header/Navbar with Logo -->
+<header>
+  <img src="logo.png" alt="PrintRaja Logo" style="height: 60px; vertical-align: middle;">
+  <h1 style="display: inline-block; margin-left: 10px;">PrintRaja</h1>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
   <!-- Hero Section with Slideshow -->
 <section class="hero">
@@ -53,7 +55,7 @@
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="section">
+<section id="services" class="section">
   <h3>Our Services</h3>
   <div class="services-grid">
     <div class="service">
@@ -76,9 +78,56 @@
       <h4>💳 PVC Plastic Card Printing</h4>
       <p>ID Cards, College Cards, Membership Cards – Durable और Waterproof PVC पर Premium Printing।</p>
     </div>
+    <div class="service">
+      <h4>📜 Letterhead Printing</h4>
+      <p>Business या Personal Use के लिए Premium Letterheads – Fast Delivery के साथ।</p>
+    </div>
+    <div class="service">
+      <h4>💼 Visiting Card Printing</h4>
+      <p>Matte, Glossy, Textured Visiting Cards – First Impression को Professional बनाएं।</p>
+    </div>
   </div>
 </section>
+<!-- Order Section -->
+<section id="order" class="section">
+  <h3>🛒 Place Your Order</h3>
+  <form id="orderForm">
+    <label>🔹 Name:</label>
+    <input type="text" id="orderName" placeholder="Your Full Name" required>
 
+    <label>🔹 Mobile Number:</label>
+    <input type="tel" id="orderPhone" placeholder="e.g. 8851006891" required>
+
+    <label>🔹 Email:</label>
+    <input type="email" id="orderEmail" placeholder="you@example.com">
+
+    <label>🔹 Delivery Address:</label>
+    <textarea id="orderAddress" placeholder="Full Address with Pin Code" required></textarea>
+
+    <label>🔹 Select Service:</label>
+    <select id="orderService" required>
+      <option value="">-- Select Service --</option>
+      <option value="Color Printout">📄 Color Printout</option>
+      <option value="B/W Printout">🖨️ Black & White Printout</option>
+      <option value="Binding">📚 Binding</option>
+      <option value="Map Printing">🗺️ Map Printing</option>
+      <option value="Glossy Photo">🖼️ Glossy Photo Printing</option>
+      <option value="PVC Card">💳 PVC Card</option>
+      <option value="Letterhead">📜 Letterhead</option>
+      <option value="Visiting Card">💼 Visiting Card</option>
+    </select>
+
+    <label>🔹 Upload File (PDF/Image):</label>
+    <input type="file" id="orderFile" accept=".pdf,.jpg,.jpeg,.png" required>
+
+    <label>🔹 Additional Instructions:</label>
+    <textarea id="orderMessage" placeholder="Any special notes or quantity"></textarea>
+
+    <button type="submit">📤 Submit Order</button>
+    <p id="orderStatus" style="color: green; font-weight: 600;"></p>
+
+  </form>
+</section>
 
 
  <!-- Contact Section -->
@@ -87,7 +136,7 @@
     
     <!-- Contact Info -->
     <p><strong>📞 Phone / WhatsApp:</strong> <a href="tel:8851006891">8851006891</a></p>
-    <p><strong>📧 Email:</strong> <a href="mailto:support@printraja.in">printraj.helpa@gmail.com</a></p>
+    <p><strong>📧 Email:</strong> <a href="mailto:support@printraja.in">printraja.in@gmail.com</a></p>
 
     <!-- Contact Form -->
     <form id="contactForm">
@@ -101,8 +150,52 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2025 PrintRaja.in | All Rights Reserved</p>
-  </footer>
+  <div class="footer-container">
+    <div class="footer-col brand">
+      <h2>PrintRaja.in</h2>
+      <p>Bharat ka Trusted Print Partner</p>
+      <p class="tagline">Fast • Reliable • Affordable</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#">Order on WhatsApp</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <p>📍 Delhi NCR, India</p>
+      <p>📞 +91-8851006891</p>
+      <p>✉️ printraja.in@gmail.com</p>
+    </div>
+
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+  <a href="https://wa.me/918851006891" target="_blank" title="WhatsApp">
+    <img src="icons/whatsapp.png" alt="WhatsApp">
+  </a>
+  <a href="https://instagram.com/yourpage" target="_blank" title="Instagram">
+    <img src="icons/instagram.png" alt="Instagram">
+  </a>
+  <a href="https://facebook.com/yourpage" target="_blank" title="Facebook">
+    <img src="icons/facebook.png" alt="Facebook">
+  </a>
+</div>
+
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© 2025 PrintRaja.in | All Rights Reserved.</p>
+  </div>
+</footer>
+
 
   <!-- JavaScript -->
   <script src="script.js"></script>
