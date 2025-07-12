@@ -80,6 +80,33 @@ nav a:hover {
   font-weight: 600;
 }
 
+/* ✅ HEADER FLEX FIX */
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.branding img {
+  height: 50px;
+}
+
+.branding h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+
 /* =====================
    ✅ Hero Section
    ===================== */
@@ -309,64 +336,192 @@ footer {
   color: #aaa;
 }
 
-/* ============================
-   ✅ Responsive Media Query
-   ============================ */
+ 
 @media (max-width: 768px) {
-  header {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px 15px;
-    text-align: center;
+
+  /* HEADER */
+    header {
+    padding: 10px;
   }
 
-  header h1 {
-    font-size: 1.8rem;
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .branding {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .branding img {
+    height: 40px;
+  }
+
+  .branding h1 {
+    font-size: 1.4rem;
   }
 
   nav {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
-    margin-top: 10px;
   }
 
-  .slideshow {
+  nav a {
+    font-size: 0.95rem;
+    padding: 6px 10px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 0;
+  }
+
+ .slideshow {
+    width: 100%;
     height: auto;
-    max-height: 250px;
+    max-height: none;
+    overflow: hidden;
+    position: relative;
   }
 
   .slide {
-    position: static;
-    height: auto;
-    display: block;
-    object-fit: contain;
-  }
-
-  .services-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service {
-    width: 90%;
-  }
-
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-col {
-    margin-bottom: 20px;
+    display: none;
+    position: static;  /* ✅ remove absolute */
     width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0;
+    transition: none;
+  }
+
+  .slide.active {
+    display: block;
+    opacity: 1;
   }
 
   .hero-text h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0 10px;
   }
 
   .hero-text p {
     font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .service {
+    width: 90%;
+    padding: 20px;
+  }
+
+  /* FORMS */
+  form,
+  #orderForm,
+  #contact form {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  form input,
+  form textarea,
+  form select,
+  form button {
+    font-size: 1rem;
+  }
+
+  /* FOOTER */
+footer {
+    padding: 15px 10px 5px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px; /* reduced spacing */
+    margin: 0;
+  }
+
+  .footer-col {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .footer-col.brand {
+    margin-bottom: 0;
+  }
+
+  .footer-col h2 {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 6px;
+    font-size: 1rem;
+  }
+
+  .footer-col p {
+    margin: 3px 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .footer-col ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  .footer-col ul li {
+    margin: 3px 0;
+  }
+
+  .footer-col ul li a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+  }
+
+  .footer-col ul li a:hover {
+    color: white;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .footer-bottom {
+    margin: 0;
+    padding-top: 6px;
+    font-size: 0.8rem;
+    color: #aaa;
+    border-top: 1px solid #444;
+    text-align: center;
   }
 }
