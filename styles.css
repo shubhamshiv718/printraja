@@ -1,13 +1,14 @@
-/* styles.css */
-/* Font, Colors & Layout Styling */
+/* ================================
+   ✅ PrintRaja.in Responsive Styles
+   ================================ */
+
 :root {
-  --primary: #1A237E;         /* Dark Royal Blue */
-  --secondary: #FFB300;       /* Bright Yellow */
-  --accent: #F9F9F9;          /* Light Grey Background */
-  --text: #212121;            /* Darker Text */
+  --primary: #1A237E;
+  --secondary: #FFB300;
+  --accent: #F9F9F9;
+  --text: #212121;
   --font-main: 'Poppins', sans-serif;
 }
-
 
 * {
   margin: 0;
@@ -22,7 +23,9 @@ body {
   line-height: 1.6;
 }
 
-/* Header Section */
+/* =====================
+   ✅ Header/Navbar
+   ===================== */
 header {
   background: var(--primary);
   color: white;
@@ -34,16 +37,13 @@ header {
   border-bottom: 3px solid var(--secondary);
 }
 
-
-/* Website Name Text */
 header h1 {
-  font-size: 2.8rem;            /* ⬅ Text बड़ा और bold */
+  font-size: 2.8rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: 1px;
 }
 
-/* Navigation Links */
 nav {
   display: flex;
   gap: 25px;
@@ -80,30 +80,28 @@ nav a:hover {
   font-weight: 600;
 }
 
-
-
-
+/* =====================
+   ✅ Hero Section
+   ===================== */
 .hero {
   position: relative;
   text-align: center;
   background: var(--accent);
 }
 
-
 .slideshow {
   width: 100%;
-  height: 400px; /* You can adjust this */
+  height: 400px;
   position: relative;
   overflow: hidden;
 }
-
 
 .slide {
   width: 100%;
   height: 100%;
   position: absolute;
-  object-fit: cover;      /* ✅ Full area cover without black sides */
-  object-position: center; /* ✅ Centered image */
+  object-fit: cover;
+  object-position: center;
   top: 0;
   left: 0;
   opacity: 0;
@@ -116,46 +114,31 @@ nav a:hover {
   z-index: 2;
 }
 
-#about {
-  padding: 40px 20px; /* ⬅ Height कम किया */
-  background-color: #ffffff;
-  text-align: center;
+.hero-text {
+  padding: 20px;
 }
 
-#about h3 {
+.hero-text h2 {
   font-size: 2rem;
   color: var(--primary);
-  margin-bottom: 15px;
-  position: relative;
 }
 
-#about h3::after {
-  content: "";
-  width: 60px;
-  height: 3px;
-  background-color: var(--secondary);
-  display: block;
-  margin: 8px auto 0;
-  border-radius: 2px;
+.hero-text p {
+  font-size: 1.1rem;
+  color: #555;
 }
 
-#about p {
-  font-size: 1.05rem;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-
+/* =====================
+   ✅ Section Styling
+   ===================== */
 .section {
-  padding: 5px 30px; /* ⬅ अब ऊपर-नीचे space कम हो जाएगा */
-  background-color: #f8f9fa;
+  padding: 40px 30px;
   text-align: center;
+  background-color: #f8f9fa;
 }
 
 .section:nth-child(even) {
-  background-color: #ffffff; /* Alternate BG */
+  background-color: #ffffff;
 }
 
 .section h3 {
@@ -175,62 +158,9 @@ nav a:hover {
   border-radius: 2px;
 }
 
-
-.section#contact a {
-  color: var(--primary);
-  font-weight: 500;
-  text-decoration: none;
-}
-
-#contact p {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-#contact a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-#contact form {
-  margin-top: 20px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-#contact input,
-#contact textarea {
-  padding: 12px 15px;
-  font-size: 1rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: border 0.3s;
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  border-color: var(--primary);
-}
-
-#contact button {
-  background-color: var(--secondary);
-  color: #000;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-#contact button:hover {
-  background-color: var(--primary);
-  color: white;
-}
-
+/* =====================
+   ✅ Services Grid
+   ===================== */
 .services-grid {
   display: flex;
   flex-wrap: wrap;
@@ -253,7 +183,6 @@ nav a:hover {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
-
 .service h4 {
   color: var(--primary);
   font-size: 1.3rem;
@@ -266,33 +195,50 @@ nav a:hover {
   line-height: 1.5;
 }
 
-
-
-form {
+/* =====================
+   ✅ Forms
+   ===================== */
+form,
+#orderForm,
+#contact form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 
-input, textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+form input,
+form textarea,
+form select,
+form button {
+  width: 100%;
+  padding: 12px;
   font-size: 1rem;
-  border-radius: 4px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-button {
+form button {
   background: var(--primary);
   color: white;
-  padding: 10px;
+  font-weight: 600;
   border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
+  transition: background 0.3s;
+  border-radius: 8px;
 }
 
+form button:hover {
+  background-color: var(--secondary);
+  color: #000;
+}
+
+/* =====================
+   ✅ Footer
+   ===================== */
 footer {
-  background-color: #1A237E;
+  background-color: var(--primary);
   color: #ddd;
   padding: 40px 20px 10px;
   font-family: var(--font-main);
@@ -314,7 +260,7 @@ footer {
 
 .footer-col h4 {
   font-size: 1.2rem;
-  color: #FFB300;
+  color: var(--secondary);
   margin-bottom: 15px;
 }
 
@@ -342,28 +288,12 @@ footer {
   margin-bottom: 8px;
 }
 
-.brand h2 {
-  font-size: 1.6rem;
-  color: #fff;
-  margin-bottom: 8px;
-}
-
-.tagline {
-  font-style: italic;
-  color: #bbb;
-  font-size: 0.9rem;
-}
-
 .social-icons a img {
   width: 30px;
   height: 30px;
   margin-right: 12px;
-  border-radius: 6px; /* Optional: rounded corners */
+  border-radius: 6px;
   transition: transform 0.3s ease;
-}
-
-.social-icons a:hover img {
-  transform: scale(1.15);
 }
 
 .social-icons a:hover img {
@@ -379,30 +309,38 @@ footer {
   color: #aaa;
 }
 
+/* ============================
+   ✅ Responsive Media Query
+   ============================ */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
-    padding: 15px;
+    padding: 10px 15px;
     text-align: center;
   }
 
   header h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 1.8rem;
   }
 
   nav {
     flex-direction: column;
     gap: 10px;
+    margin-top: 10px;
   }
 
-.slide {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  .slideshow {
+    height: auto;
+    max-height: 250px;
+  }
 
+  .slide {
+    position: static;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
 
   .services-grid {
     flex-direction: column;
@@ -413,13 +351,6 @@ footer {
     width: 90%;
   }
 
- #orderForm,
-#contact form {
-  max-width: 100%;
-  padding: 0 15px;
-}
-
-
   .footer-container {
     flex-direction: column;
     align-items: center;
@@ -428,45 +359,14 @@ footer {
 
   .footer-col {
     margin-bottom: 20px;
+    width: 100%;
   }
 
-  .hero .hero-text h2 {
+  .hero-text h2 {
     font-size: 1.5rem;
   }
 
-  .hero .hero-text p {
+  .hero-text p {
     font-size: 1rem;
   }
-}
-
-
-/* ------------------------------------
-   ✅ Order Form Styling (PrintRaja.in)
-------------------------------------- */
-
-#orderForm input,
-#orderForm textarea,
-#orderForm select,
-#orderForm button {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-}
-
-#orderForm button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-  border-radius: 8px;
-}
-
-#orderForm button:hover {
-  background-color: #0056b3;
 }
