@@ -380,12 +380,65 @@ footer {
 }
 
 @media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+.slide {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service {
+    width: 90%;
+  }
+
+ #orderForm,
+#contact form {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+
   .footer-container {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
+
+  .footer-col {
+    margin-bottom: 20px;
+  }
+
+  .hero .hero-text h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero .hero-text p {
+    font-size: 1rem;
+  }
 }
+
 
 /* ------------------------------------
    ✅ Order Form Styling (PrintRaja.in)
